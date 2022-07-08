@@ -1,0 +1,180 @@
+@media screen and (max-width: 768px) {
+/*********************Global Selector**********************/
+    body {
+        margin: 0;
+        padding: 0;
+    }
+/*********************Section Header***********************/
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        margin: 57px 0;
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .hover-container li:last-of-type::before {
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        left: 0;
+        top: 65px;
+        background-color: var(--color1);
+        transition: 0.2s ease-in-out;
+        transform: translateX(0%);
+    }
+    .hover-container ul li:last-of-type:hover::before {
+        transform: translateX(100%);
+    }
+/**********************Section Form************************/
+    #filters-section {
+        padding: 50px 40px;
+    }
+    form {
+        position: relative;
+        left: 0%;
+    }
+    input[type="text"] {
+        background-color: var(--color6);
+        border: 1px solid var(--color3);
+        padding: 30px 25% 30px 5%;
+    }
+    #btn {
+        display: none;
+    }
+    #glass {
+        display: inline-block;
+        cursor: pointer;
+        padding: 30px;
+        color: var(--color6);
+        background: var(--color1);
+        border-radius: 20px 20px 20px 20px;
+        transform: translateX(-25px);
+        z-index: 2;
+    }
+    #glass:hover {
+        background: var(--color5);
+    }
+/********************Section Filters***********************/
+    #filters-section {
+        padding-bottom: 10px;
+    }
+    .filters-container {
+        display: block;
+    }
+    #fake-title {
+        margin: 0 0 10px 25px;
+    }
+    .button:hover {
+        transform: none;
+    }
+    #animals {
+        left: 0;
+    }
+/*****************Section Accomodations********************/
+    #accomodations-section {
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    #accomodations {
+        box-sizing: border-box;
+        max-width: 768px;
+        width: 95%;
+        margin-top: 25px;
+        padding: 30px 30px;
+    }
+    .card-link {
+        width: 100%;
+    }
+    .rates {
+        transition: 0.8s;
+    }
+    .card-link:hover {
+        transform: translateX(10px);
+    }
+    .card-link:hover .rates {
+        text-align: center;
+    }
+    #most-populars {
+        box-sizing: border-box;
+        max-width: 768px;
+        width: 95%;
+    }
+    .fake-link:hover {
+        letter-spacing: normal;
+        transform: none;
+    }
+/******************Section Activities**********************/
+    #display-activities {
+        display: block;
+        width: 95%;
+        margin: auto;
+        height: unset;
+    }
+    .col {
+        height: unset;
+        width: 100%;
+        justify-content: start;
+    }
+    .a-third-col {
+        height: 270px;
+    }
+    .two-thirds-col {
+        height: 270px;
+    }
+    .col-divided {
+        display: block;
+    }
+    .col a {
+        height: 270px;
+        display: block;
+        margin-bottom: 15px;
+    }
+    .activity-details {
+        line-height: 40px;
+    }
+    .small-details {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+    #longchamp-details {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+/*********************Section Footer***********************/
+    footer {
+        display: block;
+        width: 60%;
+        margin: 30px 0 0 50px;
+    }
+    footer div {
+        width: 100%;
+        text-align: left;
+    }
+    footer a {
+        font-size: 30px;
+    }
+    footer div:nth-child(3) {
+        left: unset;
+        transform: none;
+    }
+    footer .fake-link:hover {
+        transform: none;
+        letter-spacing: normal;
+    }
+}
