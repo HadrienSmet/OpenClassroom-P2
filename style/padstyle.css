@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
 /**************************Global*******************************/
     body {
         margin: 30px;
@@ -17,13 +17,15 @@
 /**********************Accomodations****************************/
     #accomodations-section {
         flex-direction: column-reverse;
-        width: 885px;
+        width: 100%;
+        position: relative;
         margin: 0;
     }
 /************************Marseille******************************/
     #accomodations {
         width: 93.4%;
         margin-right: 0;
+        padding: 20px;
     }
     .card-link {
         width: 46%;
@@ -34,16 +36,18 @@
     }
 /*************************Populars******************************/
     #most-populars {
-        width: 90%;
+        width: 94%;
         margin: 30px 0;
-        padding: 30px 60px;
+        padding: 20px;
+        /* align-items: center; */
     }
     .popular-header {
         margin-bottom: 15px;
     }
     #most-populars a {
-        margin-bottom: 15px;
-        width: 100%;
+
+        margin: 0 0 15px 5px;
+        width: 95%;
     }
 /************************Activities*****************************/
     #display-activities {

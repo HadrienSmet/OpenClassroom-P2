@@ -1,8 +1,11 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 /*********************Global Selector**********************/
     body {
         margin: 0;
         padding: 0;
+    }
+    h1 {
+        font-size: 24px;
     }
 /*********************Section Header***********************/
     header {
@@ -29,13 +32,20 @@
         background-color: var(--color1);
         transition: 0.2s ease-in-out;
         transform: translateX(0%);
+        opacity: 0;
+    }
+    .hover-container li:first-of-type:hover +li::before {
+        opacity: 1;
+        top: 65px;
     }
     .hover-container ul li:last-of-type:hover::before {
+        opacity: 1;
         transform: translateX(100%);
+        top: 65px;
     }
 /**********************Section Form************************/
     #filters-section {
-        padding: 50px 40px;
+        padding: 50px 10px;
     }
     form {
         position: relative;
@@ -43,8 +53,8 @@
     }
     input[type="text"] {
         background-color: var(--color6);
-        border: 1px solid var(--color3);
-        padding: 30px 25% 30px 5%;
+        border: 2px solid var(--color8);
+        padding: 22px 5px 22px 10px;
     }
     #btn {
         display: none;
@@ -52,7 +62,8 @@
     #glass {
         display: inline-block;
         cursor: pointer;
-        padding: 30px;
+        font-size: 22px;
+        padding: 25px;
         color: var(--color6);
         background: var(--color1);
         border-radius: 20px 20px 20px 20px;
@@ -78,6 +89,14 @@
     #animals {
         left: 0;
     }
+    #spot-info {
+        /* padding: 20px;*/
+        border-radius: 100%;
+        display: inline-block;
+    }  
+    /* #spot-info i {
+        font-size: 10px;
+    }   */
 /*****************Section Accomodations********************/
     #accomodations-section {
         padding: 15px 10px;
@@ -92,10 +111,18 @@
         max-width: 768px;
         width: 95%;
         margin-top: 25px;
-        padding: 30px 30px;
+        padding: 20px;
     }
     .card-link {
         width: 100%;
+        margin-bottom: 5px;
+    }
+    .card-link .hover-animation h3,
+    .card-link .hover-animation p {
+        margin-left: 15px;
+    }
+    .card-link .rates {
+        margin-left: 15px;
     }
     .rates {
         transition: 0.8s;
@@ -110,6 +137,10 @@
         box-sizing: border-box;
         max-width: 768px;
         width: 95%;
+        padding: 30px 15px;
+    }
+    #most-populars a {
+        margin: 0 0 15px 0;
     }
     .fake-link:hover {
         letter-spacing: normal;
@@ -118,7 +149,7 @@
 /******************Section Activities**********************/
     #display-activities {
         display: block;
-        width: 95%;
+        width: 92%;
         margin: auto;
         height: unset;
     }
@@ -128,16 +159,16 @@
         justify-content: start;
     }
     .a-third-col {
-        height: 270px;
+        height: 250px;
     }
     .two-thirds-col {
-        height: 270px;
+        height: 250px;
     }
     .col-divided {
         display: block;
     }
     .col a {
-        height: 270px;
+        height: 250px;
         display: block;
         margin-bottom: 15px;
     }
@@ -166,9 +197,7 @@
         width: 100%;
         text-align: left;
     }
-    footer a {
-        font-size: 30px;
-    }
+  
     footer div:nth-child(3) {
         left: unset;
         transform: none;
