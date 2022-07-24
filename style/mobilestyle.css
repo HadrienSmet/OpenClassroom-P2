@@ -5,12 +5,23 @@
         padding: 0;
     }
     h1 {
-        font-size: 24px;
+        margin-left: 20px;
+        margin-right: 5px;
+        font-size: 23px;
+    }
+    h2 {
+        font-size: 22px;
+        font-weight: bolder;
+    }
+    h4 {
+        font-size: 18px;
     }
 /*********************Section Header***********************/
     header {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        padding: unset;
     }
     .logo {
         margin: 57px 0;
@@ -23,12 +34,18 @@
         justify-content: space-around;
         margin-top: 20px;
     }
+    .hover-container li {
+        margin: unset;
+    }
+    .hover-container a {
+        font-size: 18px;
+    }
     .hover-container li:last-of-type::before {
         position: absolute;
         width: 50%;
         height: 2px;
         left: 0;
-        top: 65px;
+        top: 27px;
         background-color: var(--color1);
         transition: 0.2s ease-in-out;
         transform: translateX(0%);
@@ -36,120 +53,170 @@
     }
     .hover-container li:first-of-type:hover +li::before {
         opacity: 1;
-        top: 65px;
+        top: 27px;
     }
     .hover-container ul li:last-of-type:hover::before {
         opacity: 1;
         transform: translateX(100%);
-        top: 65px;
+        top: 27px;
     }
 /**********************Section Form************************/
     #filters-section {
-        padding: 50px 10px;
+        padding: 50px 0px 10px;
+        margin-top: unset;
+    }
+    #filters-section > p:nth-child(2) {
+        margin-left: 20px;
+        margin-right: 10px;
+        font-size: 16px;
     }
     form {
-        position: relative;
-        left: 0%;
+        box-sizing: border-box;
+        position: absolute;
+        display: block;
+        left:  20px;
+        width: calc(100% - 40px);
+    }
+    #location-dot {
+        font-size: 18px;
+        padding: 25px;
     }
     input[type="text"] {
+        position: absolute;
+        font-size: 18px;
         background-color: var(--color6);
-        border: 2px solid var(--color8);
-        padding: 22px 5px 22px 10px;
+        border: 1px solid var(--color3);
+        padding: unset;
+        padding-left: 10px;
+        padding-bottom: 22.5px;
+        padding-top: 22.5px;
+        width: calc(100% - 111.5px);
     }
     #btn {
         display: none;
     }
     #glass {
         display: inline-block;
+        position: absolute; 
+        right: 0px;
         cursor: pointer;
-        font-size: 22px;
+        font-size: 18px;
         padding: 25px;
         color: var(--color6);
         background: var(--color1);
         border-radius: 20px 20px 20px 20px;
-        transform: translateX(-25px);
         z-index: 2;
     }
     #glass:hover {
         background: var(--color5);
     }
 /********************Section Filters***********************/
-    #filters-section {
-        padding-bottom: 10px;
-    }
     .filters-container {
+        margin-top: 110px;
+        margin-left: 20px;
         display: block;
     }
     #fake-title {
-        margin: 0 0 10px 25px;
+        font-size: 18px;
+        margin: 0 0 10px 0px;
+    }
+    .button {
+        margin: 0 35px 10px 0px;
     }
     .button:hover {
         transform: none;
     }
+    .spot {
+        width: 45px;
+        height: 45px;
+    }
+    .button p {
+        font-size: 16px;
+        padding: 11px 21px 11px 30px;
+        transform: translateX(22.5px);
+    }
+    #romance {
+        left: 0;
+    }
     #animals {
         left: 0;
     }
+    #info {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
     #spot-info {
-        /* padding: 20px;*/
         border-radius: 100%;
         display: inline-block;
     }  
-    /* #spot-info i {
-        font-size: 10px;
-    }   */
 /*****************Section Accomodations********************/
     #accomodations-section {
-        padding: 15px 10px;
+        overflow: hidden;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         box-sizing: border-box;
         width: 100%;
+        padding: unset;
+        margin: unset;
     }
     #accomodations {
         box-sizing: border-box;
         max-width: 768px;
-        width: 95%;
+        width: 100%;
+        background-color: var(--color6);
+        border-radius: 0%;
         margin-top: 25px;
         padding: 20px;
+        margin-left: unset;
     }
     .card-link {
         width: 100%;
         margin-bottom: 5px;
+        box-shadow: 0px 0px 15px 6px #a5a3a35c;
+    }
+    .card-link:hover {
+        transform: none;
     }
     .card-link .hover-animation h3,
     .card-link .hover-animation p {
         margin-left: 15px;
     }
-    .card-link .rates {
-        margin-left: 15px;
-    }
     .rates {
         transition: 0.8s;
-    }
-    .card-link:hover {
-        transform: translateX(10px);
-    }
-    .card-link:hover .rates {
-        text-align: center;
     }
     #most-populars {
         box-sizing: border-box;
         max-width: 768px;
-        width: 95%;
-        padding: 30px 15px;
+        width: 100%;
+        border-radius: 0%;
+        padding: 30px 20px;
+        margin-left: unset;
+
     }
     #most-populars a {
+        width: 97%;
         margin: 0 0 15px 0;
+        
+    }
+    #most-populars a:hover {
+        transform: none;
     }
     .fake-link:hover {
         letter-spacing: normal;
         transform: none;
     }
 /******************Section Activities**********************/
+    #activities-section {
+        padding: 10px 20px;
+        margin: unset;
+    }
+    #activities-section > h2 {
+        margin: 0px 0px 25px;
+    }
     #display-activities {
         display: block;
-        width: 92%;
+        width: 100%;
         margin: auto;
         height: unset;
     }
@@ -170,7 +237,6 @@
     .col a {
         height: 250px;
         display: block;
-        margin-bottom: 15px;
     }
     .activity-details {
         line-height: 40px;
@@ -189,13 +255,16 @@
     }
 /*********************Section Footer***********************/
     footer {
-        display: block;
-        width: 60%;
-        margin: 30px 0 0 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color3);
+        height: unset;
+        padding: 40px 10px 0 20px;
     }
     footer div {
         width: 100%;
         text-align: left;
+        position: relative;
     }
   
     footer div:nth-child(3) {

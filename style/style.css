@@ -1,17 +1,11 @@
 /************************Settings**************************/
 :root {
     --color1: #0065FC;
-    --color2: #cbdefc;
-    --color3: #dbdbdb;
+    --color2: #deebff;
+    --color3: #f2f2f2;
     --color4: black;
     --color5: #3083ff;
     --color6: white;
-    --color7: #ffffff;
-    --color8: #f2f2f2;
-}
-@font-face {
-    font-family: "font-1";
-    src: url(../assets/fonts/Raleway-Regular.ttf);
 }
 /*********************Global Selector**********************/
 html {
@@ -22,25 +16,26 @@ html {
     padding: 0;
 }
 body {
-    margin: 30px 45px 45px;
-    font-family: "font-1";
+    font-family: 'Raleway', sans-serif;
     color: var(--color4);
     background-color: var(--color6);
 }
 h1 {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 15px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 25px;
     margin: 25px;
 }
 h3 {
     font-size: 20px;
+    font-weight: bolder;
 }
 h4 {
     font-size: 25px;
     font-weight: 900;
+    margin-bottom: 15px;
 }
 img {
     width: 100%;
@@ -56,7 +51,7 @@ a {
     color: var(--color4);
 }
 input {
-    font-family: "font-1";
+    font-family: 'Raleway', sans-serif;
     font-size: 22px;
     font-weight: bold;
 }
@@ -65,6 +60,7 @@ span {
 }
 /*********************Section Header***********************/
 header {
+    padding: 30px 45px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,9 +100,10 @@ header {
 }
 /**********************Section Form************************/
 #filters-section {
-    margin-top: 45px;
+    margin-top: 65px;
+    padding: 0 45px;
 }
-#filters-section p:nth-child(2) {
+#filters-section > p:nth-child(2) {
     font-size: 20px;
 }
 form {
@@ -114,16 +111,20 @@ form {
     display: flex;
     align-items: center;
 }
+/* .form {
+    display: flex;
+    align-items: center;
+} */
 #location-dot {
     padding: 27px;
     font-size: 20px;
-    background-color: var(--color8);
-    border-radius: 100px 0 0 100px;
+    background-color: var(--color3);
+    border-radius: 20px 0 0 20px;
 }
 input[type="text"] {
-    border: 2px solid var(--color8);
-    background-color: var(--color7);
-    padding: 22px 80px 22px 30px;
+    border: 2px solid var(--color3);
+    background-color: var(--color6);
+    padding: 22px 60px 22px 30px;
 }
 input[type="text"]:focus-visible {
     outline: none;
@@ -134,7 +135,7 @@ input[type="text"]:focus-visible {
     font-size: 22px;
     font-weight: bold;
     background: var(--color1);
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 20px 20px 0;
     border: 1px solid var(--color1);
     padding: 23px 22px 23px;
     transition: 0.4s;
@@ -157,7 +158,7 @@ input[type="text"]:focus-visible {
 }
 .filters-container p {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 #fake-title {
     font-size: 24px;
@@ -167,8 +168,8 @@ input[type="text"]:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
-    height: 54px;
+    width: 49px;
+    height: 49px;
     border-radius: 60px;
     background: var(--color2);
     z-index: 2;
@@ -187,11 +188,11 @@ input[type="text"]:focus-visible {
 }
 .button p {
     border: 2px solid var(--color3);
-    padding: 13px 31px 13px 50px;
+    padding: 12px 21px 12px 30px;
     border-radius: 0px 60px 60px 0px;
-    transform: translateX(27px);
+    transform: translateX(24.5px);
     transition: 0.4s ease;
-    font-size: 16px;
+    font-size: 18px;
 }
 #mobile-display {
     display: flex;
@@ -257,8 +258,11 @@ input[type="text"]:focus-visible {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    gap: 3px;
     transition: 0.4s ease-out;
+}
+.hover-animation p {
+    font-size: 14px;
 }
 main span::before {
     content: "\26B2";
@@ -274,6 +278,7 @@ main span:hover::before {
 #accomodations-section {
     display: flex;
     margin: 50px 0;
+    padding: 0 45px;
 }
 /****************Marseille Accomodations*******************/
 #accomodations {
@@ -284,12 +289,16 @@ main span:hover::before {
     margin-right: 20px;
 }
 #accomodations h2 {
-    margin: 0 10px 5px;
+    margin: 10px 0 10px;
 }
 #marseille-cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+#marseille-cards h3,
+#marseille-cards p {
+    margin-left: 15px;
 }
 .card-link {
     width: 31%;
@@ -298,10 +307,6 @@ main span:hover::before {
     padding: 5px 5px 7px;
     margin: 15px 0;
     transition: 0.6s ease-in;
-}
-.card-link .hover-animation h3,
-.card-link .hover-animation p {
-    margin: 4px 0px 4px 15px;
 }
 .card-link .rates {
     padding: 4px 0px 4px 15px;
@@ -366,13 +371,16 @@ main span:hover::before {
     flex-direction: column;
     justify-content: space-between;
 }
+#most-populars .hover-animation {
+    gap: 20px;
+}
 .popular-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .popular-header h2 {
-    margin: 10px 0 0;
+    margin: 10px 0 10px;
 }
 #most-populars a {
     display: flex;
@@ -411,19 +419,27 @@ main span:hover::before {
     opacity: 1;
 }
 /******************Section Activities**********************/
+#activities-section {
+       padding: 0 45px; 
+}
+#activities-section > h2 {
+    margin: 25px 0px;
+}
 #display-activities {
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .col {
-    width: 24%;
+    width: 22.5%;
     height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .two-thirds-col {
-    height: 58%;
+    height: 50%;
     border-radius: 25px;
     box-shadow: 0px 3px 20px 6px #a5a3a387;
 }
@@ -500,9 +516,10 @@ main span:hover::before {
 /*********************Section Footer***********************/
 footer {
     margin-top: 60px;
-    padding: 0 35px;
+    padding: 50px 45px;
     display: flex;
     justify-content: space-between;
+    background-color: var(--color3);
 }
 footer div {
     display: flex;
@@ -510,8 +527,9 @@ footer div {
     width: 30%;
 }
 footer .fake-link {
-    margin: 20px 0;
+    margin: 5px 0;
     font-size: 16px;
+    font-weight: normal;
 }
 footer .fake-link:hover {
     letter-spacing: 0.5px;
